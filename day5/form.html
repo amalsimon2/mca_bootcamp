@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+<!-- css -->
+<style>
+    
+    .nav {
+  display: flex;
+  justify-content: center; /* center the nav contents */
+  align-items: center;
+  padding: 10px 0;
+  background-color: #f8f8f8; /* optional background */
+}
+
+.side ul {
+  display: flex;
+  gap: 20px; /* spacing between items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; /* optional */
+  font-size: 14px;
+  align-items: center;
+}
+
+    .heading{
+        text-align: center;
+        font-family:'Times New Roman', Times, serif
+        
+    }
+    .card{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background-color:#F5F5F7;
+        font-family: sans-serif;
+        text-align: center;
+        border: 2px solid black;
+    }
+    .card .iphone {
+  font-size: 54px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.card img {
+  width: 50%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.btn1 {
+  margin: 5px;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 25px;
+  background-color: #0071e3;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn2 {
+  margin: 5px;
+  padding: 14px 24px;
+  border: 2px solid #0071e3;
+  border-radius: 25px;
+  background-color: white;
+  color: #0071e3;
+  cursor: pointer;
+  font-size: 14px;
+}
+.btn1:hover{
+    background-color: rgb(47, 64, 179);
+}
+
+.btn2:hover {
+  background-color: #0071e3;
+  color: white;
+}
+.card .nn{
+    color: #e700b1;
+}
+
+/* Container */
+.mac {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 20px;
+    margin: 0 auto;
+    background-color: #EAF6FD;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+/* Headline */
+.mac .macbook {
+    font-size: 56px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 10px;
+}
+
+/* Subheadline */
+.mac p {
+    font-size: 22px;
+    font-weight: 450;
+    color: black;
+    margin: 10px 0 40px 0;
+    
+}
+
+/* Product Image */
+.mac img {
+    width: 70%;
+    max-width: 900px;
+    height: auto;
+    margin-top: 40px;
+}
+
+/* Button Styles */
+.btn3,
+.btn4 {
+    margin: 5px;
+    padding: 12px 28px;
+    border-radius: 980px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Filled Button (like "Buy") */
+.btn3 {
+    background-color: #0071e3;
+    border: none;
+    color: white;
+}
+
+.btn3:hover {
+    background-color: #005bb5;
+}
+
+/* Outline Button (like "Learn More") */
+.btn4 {
+    background-color: transparent;
+    border: 1px solid #0071e3;
+    color: #0071e3;
+}
+
+.btn4:hover {
+    background-color: #0071e3;
+    color: white;
+}
+
+/* Optional Accent Text */
+.mac .mm {
+    color: #e700b1;
+    font-weight: 500;
+}
+.terms p{
+  color: gray;
+  font-size: small;
+}
+</style>
+
+</head>
+
+<body>
+    <!-- top search bar -->
+    <header>
+        <nav class="nav">
+  <div class="side">
+    <ul>
+      <li><i class="fa-brands fa-apple"></i></li>
+      <li>Store</li>
+      <li>Mac</li>
+      <li>iPad</li>
+      <li>iPhone</li>
+      <li>Watch</li>
+      <li>AirPods</li>
+      <li>TV & Home</li>
+      <li>Entertainment</li>
+      <li>Accessories</li>
+      <li>Support</li>
+      <li><i class="fas fa-search"></i></li>
+      <li><i class="fa-solid fa-bag-shopping"></i></li>
+    </ul>
+  </div>
+</nav>
+
+        <p class="heading">Get up to 6 months of No Cost EMI+  plus up to ₹10000.00 instant cashback+  on selected products with eligible cards.<a href="#"  >Shop ></a></p>
+    </header>
+    <div class = "card">
+        <p class="iphone"><b>iPhone</b></p>
+        <p style="font-size: 28px;">Meet the iPhone 16 family</p>
+        <button class="btn1">Learn More</button>
+        <button class="btn2">Shop iPhone</button>
+        <p class="nn">Built for Apple Intelligence</p>
+        <img src="/assets/iphonemodels.png" alt="iPhone Models">
+        </div>
+    <div class="mac">
+    <p class="macbook"><b>MacBook Air</b></p>
+    <p style="font-size: 28px;">Sky blue colour<br>Sky high performance with M4</p>
+    
+
+    <!-- Button Group -->
+    <div class="btn-group">
+        <button class="btn3">Learn More</button>
+        <button class="btn4">Buy</button>
+    </div>
+
+    <!-- Image -->
+    <img src="/assets/macbook.png" alt="MacBook Image">
+
+    <!-- Tagline -->
+    <p class="mm">Built for Apple Intelligence</p>
+</div>
+<div class="terms">
+    <p>No Cost EMI is available with the purchase of an eligible product made using qualifying cards on 3- or 6-month tenures from most leading card issuers. Monthly pricing is rounded to the nearest rupee. Exact pricing will be provided by your card issuer, subject to your card issuer’s terms and conditions. Minimum order spend applies as per your card issuer’s threshold. No Cost EMI is not available to business customers and cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Card eligibility is subject to terms and conditions between you and your card issuer. Offer may be revised or withdrawn at any time without any prior notice. Terms apply.</p>
+  
+  <p>‡Instant cashback is available with the purchase of an eligible product with qualifying American Express, Axis Bank and ICICI Bank cards only. Minimum transaction value of ₹10001.00 applies. Click here to see instant cashback amounts and eligible devices. Instant cashback is available for up to two orders per rolling 90-day period with an eligible card. Card eligibility is subject to terms and conditions between you and your card issuer. Total transaction value is calculated after any trade-in credit or eligible discount is applied. Any subsequent order adjustment(s) or cancellation(s) may result in instant cashback being recalculated, and any refund may be adjusted to account for instant cashback clawback; this may result in no refund being made to you. Offer may be revised or withdrawn at any time without any prior notice. Additional terms apply. Instant cashback is not available to business customers and cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Multiple separate orders cannot be combined for instant cashback</p>
+  
+  <p>*Apple Education Pricing is available to current and newly accepted college students and their parents, as well as teachers and staff at all levels. For more information, visit apple.com/in-edu/store.</p>
+  
+  <p>1. Qualified Purchasers can receive Promotion Savings when they purchase an eligible Mac or iPad with their choice of a Promotion Product at a Qualifying Location. Customers will be charged for all items in their cart, including the Promotion Product. Only one Promotion Product can be obtained per eligible Mac or iPad per Qualified Purchaser. The offer is subject to availability, while supplies last. View full terms and conditions of offer here.</p>
+  <p >2. Available in two models: AirPods 4 and AirPods 4 with Active Noise Cancellation.</p>
+  
+  <p>Apple Intelligence is available in beta on all iPhone 16 models, iPhone 15 Pro, iPhone 15 Pro Max, iPad mini (A17 Pro), and iPad and Mac models with M1 and later, with Siri and device language set to the same supported language, as part of an iOS 18, iPadOS 18 and macOS Sequoia software update. Supported languages include English, French, German, Italian, Portuguese (Brazil), Spanish, Japanese, Korean and Chinese (Simplified). More languages are coming over the course of the year, including Vietnamese. Some features may not be available in all regions or languages.</p>
+  <p>A subscription is required for Apple TV+.</p>
+  <p>Features are subject to change. Some features, applications and services may not be available in all regions or all languages.
+</p>
+</div>
+<footer>
+
+</footer>
+
+    
+</body>
+</html>
