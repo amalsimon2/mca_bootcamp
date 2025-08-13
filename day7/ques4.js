@@ -1,5 +1,4 @@
-// sum of numbers from 1 to n
-n=5
+n=4
 total = 0
 for(i=1;i<=n;i++){
     total+= i 

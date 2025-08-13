@@ -1,5 +1,4 @@
-// print all odd and even number upto n
-let n=20
+let n=5
 for(i=0;i<n;i++){
     
     if(i % 2 == 0){
