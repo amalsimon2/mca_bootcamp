@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Landing Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    
+</head>
+<body>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        #mini img{
+
+            height: 10%;
+            width: 150px;
+        }
+            
+        #mini{
+            display: flex;
+            position: absolute;
+            bottom: 40px;
+            right: 10px ;
+        }
+
+
+        #arrow1{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            height: 50px;
+            width: 100px;
+        
+            
+            
+
+        }
+        #arrow2{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 50px;
+            width: 100px;
+            rotate: 180deg;
+        }
+        
+        #container {
+           background-image: url("assets/car1.jpg");
+           height: 100vh;
+           width: 100%;
+           
+           background-size: cover;
+           background-repeat: no-repeat;
+           position: relative;
+        }
+    </style>
+    <div id="container">
+        <div class = "arrow">
+            <img id ="arrow1" onclick="changeimg()" src="assets/right-arrow.png" style="cursor: pointer;" >
+            <img id ="arrow2" onclick="changebackimg()"  src="assets/right-arrow.png" style="cursor: pointer;">
+        </div>
+        <div id="mini">
+            <img src="assets/car2.jpg" alt="">
+            <img src="assets/car3.jpg" alt="">
+            <img src="assets/car4.jpg" alt="">
+            <img src="assets/car5.jpg" alt="">
+            <img src="assets/car6.jpg" alt="">
+
+        </div>
+    </div>
+    <script src='javascript.js'></script>
+</body>
+</html>

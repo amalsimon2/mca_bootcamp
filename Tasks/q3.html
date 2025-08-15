@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseFloat(prompt("Enter the number of years:"));
+        let p = parseFloat(prompt("Enter Principal Value:"));
+        let r = parseFloat(prompt("Enter the rate of interest:"));
+        let i = r/100
+        let formula = p * (1 + i) ** n;
+        document.write("Compound Interest" + formula);
+    </script>
+    
+</body>
+</html>
