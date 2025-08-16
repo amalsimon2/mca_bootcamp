@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+let text = prompt("Enter the text below: ");
+let letters = 0;
+let digits = 0;
+let space =0;
+let others = 0;
+for(let i = 0;i<text.length;i++){
+    
+    let k = text[i];
+    if(k >= 'a' && k <= 'z' || k >= 'A' && k <= 'Z'){
+        letters++;
+    }else if(k >= '0' && k <= '9'){
+        digits++;
+    }else if(k === ' '){
+        space++;
+    }else{
+        others++;
+
+    
+        
+    }
+
+    }
+    document.write("The text is ",text);
+    document.write("<br>Letters: ", letters);
+    document.write("<br>Digits: ", digits); 
+    document.write("<br>Spaces: ", space);
+    document.write("<br>Others: ", others);
+
+
+</script>
+</body>
+</html>

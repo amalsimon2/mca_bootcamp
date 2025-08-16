@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let h ="";
+        let temp = parseInt(prompt("Enter Tthe water temperature: "));
+        if(temp < 0){
+            h = "ICE";
+        }
+        else if (temp >= 0 && temp <=100){
+            h = "WATER";
+        }
+        else {
+            h = "STEAM";
+        }
+        document.write("Water status is "+ h + " for the Temperature " + temp );
+    </script>
+</body>
+</html>

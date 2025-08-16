@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        letter = "*"
+        
+        let a = prompt("Enter 5 Numbers in a same line: ");
+        let n = a.split(" ");
+        for(let i =0;i<n.length;i++){
+            document.write(n[i],"  ",(letter.repeat(n[i]))," <br>");
+        }
+
+    </script>
+</body>
+</html>
