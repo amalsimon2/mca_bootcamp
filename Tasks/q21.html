@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("How many Prime numbers?"));
+        let count = 0;
+        let num = 2;
+        function isPrime(num){
+            if (num === 2) {
+                return true;
+            }
+            if (num % 2 ===0 ){
+                return false;
+            }
+            if (num < 2) {
+                return false;
+            }            
+            for (let i = 3; i <= Math.sqrt(num); i += 2) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        while (count < n) {
+            if (isPrime(num)) {
+                document.write(num + " ");
+                count++;
+            }
+            num++;
+        }
+    </script>
+</body>
+</html>

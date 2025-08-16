@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("How many Fibonacci terms?"));
+        let f1 =1;
+        let f2 = 1;
+        document.write(f1 + " " + f2 + " ");
+        for (let i =3; i <= n; i++) {
+            let f3 = f1 + f2;
+            f1 = f2;
+            f2 = f3;
+            document.write(f3 + " ");
+        }
+    </script>
+</body>
+</html>

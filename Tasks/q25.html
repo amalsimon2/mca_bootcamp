@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = [];
+        let n = parseInt(prompt("Enter how many numbers?"));
+        for (let i = 1;i<=n;i++){
+        let num = parseInt(prompt("Enter the numbers: "));   
+        
+        arr.push(num);
+        }
+        let larger = 0;
+        for(j=0;j<arr.length;j++){
+            if (arr[j] > larger)
+            {
+                larger = arr[j];
+
+            }
+        }
+        
+        let second = arr.filter((arr => arr !== larger));
+        let final =0;
+        for(k=0;k<second.length;k++){
+            if (second[k] > final)
+            {
+                final = second[k];
+
+            }
+        }
+        document.write("Second largest number is: "+final)
+        
+
+
+        
+    </script>
+</body>
+</html>

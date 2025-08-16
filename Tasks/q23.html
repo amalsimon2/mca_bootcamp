@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #code{
+            white-space: pre;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="code"></div>
+    <script>
+        let n = parseInt(prompt("Enter Number of Lines:"));
+        for (let i =1;i<=n;i++){
+            let row ="";
+            for (let j =1;j<=n-i;j++){
+                row += " ";
+            }
+            for (let k =i;k<i+i;k++){
+                row += k;
+            }
+            for(let j = i+i-2; j>=i; j--){
+                row += j;
+            }
+            document.getElementById("code").innerHTML += row + "<br>";
+        }
+    </script>
+    
+</body>
+</html>
