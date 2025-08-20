@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <style>
+    .nav {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f8f8f8;
+    }
+
+    .leftside ul,
+    .rightside ul {
+      display: flex;
+      gap: 20px; 
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif; 
+      font-size: 14px;
+      align-items: center;
+    }
+
+    .pslogo {
+      width: 38px;
+      background-color: white;
+    }
+
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .top {
+      display: flex;
+      justify-content: flex-end; 
+      align-items: center;
+      background-color: black;
+      padding: 5px 15px;
+    }
+
+    .top p {
+      margin: 0;
+      font-size: 18px;
+      color: #f8f8f8;
+    }
+
+    .btn1 {
+      padding: 6px 12px;
+      border: none;
+      border-radius: 25px;
+      background-color: #0071e3;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .btn1:hover {
+      background-color: #005bb5;
+    }
+    .card img{
+      height: 600px;
+      width: 100%;
+
+    }
+    .card {
+  position: relative;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  
+}
+#arrowLeft{
+  rotate: 180deg;
+}
+
+.arrow img {
+  width: 0;
+  height: 0;
+  
+}
+
+.mini {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.mini img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+  
+}
+
+.mini img:hover {
+  opacity: 1;
+  transform: translate(0, -5px);
+  transform: scale(1.05);
+
+}
+
+
+.container p {
+  
+  flex: 1;              
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+.container img {
+  width: 55%;         
+  height: 75%;
+  
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  gap: 40px;
+}
+
+.text-section {
+  flex: 1;
+  font-family: sans-serif;
+}
+
+.text-section h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.text-section h3 {
+  font-size: 20px;
+  color: #0071e3;
+  margin-bottom: 10px;
+}
+
+.text-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-blue {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #0071e3;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-blue:hover {
+  background-color: #005bb5;
+}
+
+.btn-orange {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-orange:hover {
+  background-color: #c0392b;
+}
+
+.container img {
+  width: 50%;
+  max-width: 600px;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top">
+      <p><b>SONY</b></p>
+    </div>
+
+    <nav class="nav">
+      <div class="leftside">
+        <ul>
+          <li><img class="pslogo" src="assets/ps.png" alt="PS Logo"></li>
+          <li>Games</li>
+          <li>PS5</li>
+          <li>PS4</li>
+          <li>Services</li>
+          <li>Accessories</li>
+          <li>News</li>
+          <li>Store</li>
+          <li>Support</li>
+        </ul>
+      </div>
+
+      <div class="rightside">
+        <ul>
+          <li><button class="btn1">Sign In</button></li>
+          <li><i class="fas fa-search"></i></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+ <div class="card">
+  
+  <img id="mainImg" src="assets/slides/s1.png" alt="PS5 Image">
+
+  
+  <div class="arrow">
+    <img id="arrowLeft" onclick="changebackimg() ">
+    <img id="arrowRight" onclick="changeimg()" >
+  </div>
+
+  
+  <div class="mini">
+    <img src="assets/slides/s1.png" alt="" onclick="showImage(0)">
+    <img src="assets/slides/s2.png" alt="Thumb 2" onclick="showImage(1)">
+    <img src="assets/slides/s3.png" alt="Thumb 3" onclick="showImage(2)">
+    <img src="assets/slides/s4.png" alt="Thumb 4" onclick="showImage(3)">
+    <img src="assets/slides/s5.png" alt="Thumb 5" onclick="showImage(4)">
+    <br>
+  </div>
+</div>
+
+<div class="container">
+  <div class="text-section">
+    <h1>Discover all PS5 consoles and accessories</h1>
+    <h3>PlayStation 5 Console</h3>
+    <p>Experience an all-new generation of incredible PlayStation games.</p>
+    <div class="buttons">
+      <button class="btn-blue">Find out more</button>
+      <button class="btn-orange">Buy now</button>
+    </div>
+  </div>
+  <img src="assets/slides/ps5.png" alt="PS5 Console">
+</div>
+
+
+
+  <script src="final.js"></script>
+</body>
+</html>

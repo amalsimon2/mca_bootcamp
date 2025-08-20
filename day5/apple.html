@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* ===== Carousel Styles ===== */
+    .carousel {
+      width: 80%;
+      max-width: 900px;
+      margin: 40px auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      background: #fff;
+    }
+
+    .carousel-slides {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .carousel-slides img {
+      width: 100%;
+      flex-shrink: 0;
+      border-radius: 12px;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .carousel-btn.prev {
+      left: 15px;
+    }
+    .carousel-btn.next {
+      right: 15px;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    /* ===== Indicators ===== */
+    .carousel-indicators {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-indicators button.active {
+      background: rgba(255, 255, 255, 1);
+    }
+  </style>
+</head>
+<body>
+  <!-- ================= CAROUSEL START ================= -->
+  <div class="carousel">
+    <div class="carousel-slides" id="carousel-slides">
+      <img src="assets/iphonemodels.png" alt="iPhone Models">
+      <img src="assets/macbook.png" alt="MacBook">
+      <img src="assets/iphone.jpeg" alt="Sample 1">
+      <img src="assets/plus.jpeg" alt="Sample 2">
+    </div>
+    <button class="carousel-btn prev" onclick="prevSlide()">⟨</button>
+    <button class="carousel-btn next" onclick="nextSlide()">⟩</button>
+    <div class="carousel-indicators" id="carousel-indicators"></div>
+  </div>
+  <!-- ================= CAROUSEL END ================= -->
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll("#carousel-slides img");
+    const totalSlides = slides.length;
+    const slideContainer = document.getElementById("carousel-slides");
+    const indicatorsContainer = document.getElementById("carousel-indicators");
+
+    // Create indicators dynamically
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("button");
+      dot.addEventListener("click", () => showSlide(i));
+      indicatorsContainer.appendChild(dot);
+    }
+
+    const indicators = indicatorsContainer.querySelectorAll("button");
+
+    function updateIndicators() {
+      indicators.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentIndex);
+      });
+    }
+
+    function showSlide(index) {
+      if (index >= totalSlides) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+      } else {
+        currentIndex = index;
+      }
+      slideContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
+      updateIndicators();
+    }
+
+    function nextSlide() {
+      showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      showSlide(currentIndex - 1);
+    }
+
+    // Auto-play every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initialize
+    showSlide(0);
+  </script>
+</body>
+</html>
